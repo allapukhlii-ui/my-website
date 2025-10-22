@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation Quote</title>
+    <link rel="stylesheet" href="motiv.css">
+</head>
+<body>
+    
+    <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <blockquote id="quote">Loading...</blockquote>
+        <span id="author">Loading...</span>
+        <div>
+            <button onclick="getQuote()">New Quote</button>
+        </div>
+    </div>
+
+   <script>
+const quotes = [
+  {
+    text: "The expert in anything was once a beginner.",
+    author: "Helen Hayes"
+  },
+  {
+    text: "Don't watch the clock; do what it does. Keep going.",
+    author: "Sam Levenson"
+  },
+  {
+    text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    author: "Winston Churchill"
+  },
+  {
+    text: "Believe you can and you're halfway there.",
+    author: "Theodore Roosevelt"
+  },
+  {
+    text: "Start where you are. Use what you have. Do what you can.",
+    author: "Arthur Ashe"
+  },
+  {
+    text: "Don’t let what you cannot do interfere with what you can do.",
+    author: "John Wooden"
+  },
+  {
+    text: "Your limitation—it’s only your imagination.",
+    author: "Unknown"
+  },
+  {
+    text: "Push yourself, because no one else is going to do it for you.",
+    author: "Unknown"
+  }
+];
+
+function getQuote() {
+    let randomIndex = Math.floor(Math.random()* quotes.length);
+    let quote = quotes[randomIndex]
+
+
+    setTimeout(() => {
+        document.getElementById("quote").innerText = `"${quote.text}"`;
+        document.getElementById("author").innerText = `- ${quote.author}`;
+        document.getElementById("quote").style.opacity = 1;
+    },500);
+}
+
+window.onload = getQuote
+</script>
+</body>
+</html>
