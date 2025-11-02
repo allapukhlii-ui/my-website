@@ -1,17 +1,20 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: #bbc6fa;
-
+body {
+    background: #f4f7fc; /* gleicher Hintergrund wie andere Seiten */
+    font-family: Arial, sans-serif;
 }
 
-.quote-box{
-    background: #fff;
-    width: 700px;
+/* Zentrale Box */
+.quote-box {
+    background: rgb(151, 141, 127); /* gleiche Farbe wie Index-Box */
+    color: #fff; /* weiße Schrift für guten Kontrast */
+    width: 90%;
+    max-width: 700px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,16 +22,19 @@ body{
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 3px solid #fff; /* Rahmen wie auf der Startseite */
 }
 
-.quote-box h2{
+/* Überschrift */
+.quote-box h2 {
     font-size: 32px;
     margin-bottom: 40px;
     position: relative;
+    color: #2c3e50; /* gleiche Farbe wie h1/h2 auf Index-Seite */
 }
 
-.quote-box h2::after{
+.quote-box h2::after {
     content: "";
     width: 75px;
     height: 3px;
@@ -40,24 +46,29 @@ body{
     transform: translateX(-50%);
 }
 
-.quote-box blockquote{
+/* Zitattext */
+.quote-box blockquote {
     font-size: 26px;
     min-height: 110px;
+    transition: opacity 0.5s ease;
 }
 
-.quote-box blockquote::before,  .quote-box blockquote::after{
+/* Deko-Anführungszeichen */
+.quote-box blockquote::before,
+.quote-box blockquote::after {
     content: '"';
 }
 
-
-.quote-box span{
+/* Autor */
+.quote-box span {
     display: block;
     margin-top: 10px;
     float: right;
     position: relative;
+    transition: opacity 0.5s ease;
 }
 
-.quote-box span::before{
+.quote-box span::before {
     content: '';
     width: 20px;
     height: 2px;
@@ -67,14 +78,16 @@ body{
     left: -30px;
 }
 
-.quote-box div{
+/* Button-Bereich */
+.quote-box div {
     width: 100%;
     margin-top: 50px;
     display: flex;
     justify-content: center;
 }
 
-.quote-box button{
+/* Button */
+.quote-box button {
     background: rgb(23, 124, 229);
     color: #fff;
     border-radius: 25px;
@@ -86,5 +99,11 @@ body{
     justify-content: center;
     margin: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quote-box button:hover {
+    background: rgb(15, 90, 190);
+    transform: scale(1.05);
 }
 
