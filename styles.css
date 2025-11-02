@@ -9,6 +9,33 @@ body{
     grid-template-columns: auto 1fr;
 }
 
+h1, h2 {
+    color: #2c3e50; 
+}
+
+#sidebar svg {
+    color: #2c3e50; 
+}
+
+#sidebar svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    stroke-width: 2;
+    vertical-align: middle;
+}
+
+
+#sidebar a span {
+    margin-left: 10px;
+}
+
+
+#sidebar.close svg {
+    margin: 0 auto;
+}
+
+
 #sidebar{
     box-sizing: border-box;
     height: 100vh;
@@ -244,4 +271,5 @@ hr {
 
         .tip-text {
         color: #666;
+        }
         }
